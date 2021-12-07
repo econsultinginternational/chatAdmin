@@ -1,0 +1,693 @@
+<link rel='stylesheet' href='/chat/admin/css/style.css'>
+
+<div id="container">
+    <input type="hidden" id="room-id" value="abcdef">
+    <div id="room-urls"
+        style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;">
+    </div>
+
+    <aside>
+        <header>
+            <input type="text" placeholder="search">
+        </header>
+        <ul id="activeUsersList">
+        <!--     <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status orange"></span>
+                        offline
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status orange"></span>
+                        offline
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status orange"></span>
+                        offline
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status green"></span>
+                        online
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg" alt="">
+                <div>
+                    <h2>Prénom Nom</h2>
+                    <h3>
+                        <span class="status orange"></span>
+                        offline
+                    </h3>
+                </div>
+            </li> -->
+        </ul>
+    </aside>
+    <main>
+        <header id="activechat">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+            <div>
+                <h2>Chat with Vincent Porter</h2>
+                <h3>already 1902 messages</h3>
+            </div>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
+        </header>
+        <ul id="chat" class="chat">
+            <!-- 			<li class="you">
+				<div class="entete">
+					<span class="status green"></span>
+					<h2>Vincent</h2>
+					<h3>10:12AM, Today</h3>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					OK
+				</div>
+			</li>
+			<li class="you">
+				<div class="entete">
+					<span class="status green"></span>
+					<h2>Vincent</h2>
+					<h3>10:12AM, Today</h3>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					OK
+				</div>
+			</li> -->
+        </ul>
+        <!--       <div id="chat-container">
+            <div id="file-container"></div>
+            <div class="chat-output"></div>
+        </div> -->
+        <footer>
+            <textarea id="input-text-chat" placeholder="Enter Text Chat" disabled></textarea>
+            <!-- <button id="share-file" disabled>Share File</button> -->
+            <!-- <input type="text" id="input-text-chat" placeholder="Enter Text Chat" disabled> -->
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
+            <a href="javascript:void(0)" id="message-send">Send</a>
+        </footer>
+    </main>
+</div>
+
+<script src="/RTCMultiConnection/dist/RTCMultiConnection.js"></script>
+<script src="/RTCMultiConnection/node_modules/webrtc-adapter/out/adapter.js"></script>
+<script src="/RTCMultiConnection/node_modules/socket.io/client-dist/socket.io.js"></script>
+<script src="/RTCMultiConnection/node_modules/fbr/FileBufferReader.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+
+
+
+<script>
+
+    function appendDIV(event) {
+
+        console.log('event==' + JSON.stringify(event));
+
+        if (empty(event.userid)) {
+            console.log('i am the sender');
+            document.getElementById('chat').innerHTML += '<li class="me">' +
+                '<div class="entete">' +
+                '<h3>10:12AM, Today</h3>' +
+                '<h2>' + getFullName(connection.userid) + '</h2>' +
+                '<span class="status blue"></span>' +
+                '</div>' +
+                '<div class="triangle"></div>' +
+                '<div class="message">' +
+                event +
+                '</div>' +
+                '</li>';
+
+            // To scroll to the bottom of a div
+            const theElement = document.getElementById('chat');
+
+            const scrollToBottom = (node) => {
+                node.scrollTop = node.scrollHeight;
+            }
+
+            scrollToBottom(theElement); // The specified node scrolls to the bottom.
+        } else {
+            console.log('i am the receiver');
+            document.getElementById('chat').innerHTML += '<li class="you">' +
+                '<div class="entete">' +
+                '<span class="status green"></span>' +
+                '<h2>' + getFullName(event.userid) + '</h2>' +
+                '<h3>10:12AM, Today</h3>' +
+                '</div>' +
+                '<div class="triangle"></div>' +
+                '<div class="message">' +
+                event.data +
+                '</div>' +
+                '</li>';
+
+            // To scroll to the bottom of a div
+            const theElement = document.getElementById('chat');
+
+            const scrollToBottom = (node) => {
+                node.scrollTop = node.scrollHeight;
+            }
+
+            scrollToBottom(theElement); // The specified node scrolls to the bottom.
+        }
+
+        // document.getElementById('chat').innerHTML +=event.data || event+'==='+event.userid;
+        document.getElementById('input-text-chat').focus();
+    }
+
+
+    /*
+    |-------------------------------------------------------------------------------------------------
+    | RTCMultiConnection Code start here
+    |-------------------------------------------------------------------------------------------------
+    */
+
+    var connection = new RTCMultiConnection();
+
+    // by default, socket.io server is assumed to be deployed on your own URL
+    connection.socketURL = 'https://www.privatechat.us:9001/';
+
+    // comment-out below line if you do not have your own socket.io server
+    // connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
+
+    //connection.socketMessageEvent = 'textchat-plus-fileshare-demo';
+    connection.socketMessageEvent = 'chatbox';
+
+    connection.enableFileSharing = true; // by default, it is "false".
+
+    connection.session = {
+        data: true
+    };
+
+    connection.sdpConstraints.mandatory = {
+        OfferToReceiveAudio: false,
+        OfferToReceiveVideo: false
+    };
+
+    // https://www.rtcmulticonnection.org/docs/iceServers/
+    // use your own TURN-server here!
+    connection.iceServers = [{
+        'urls': [
+            'stun:stun.l.google.com:19302',
+            'stun:stun1.l.google.com:19302',
+            'stun:stun2.l.google.com:19302',
+            'stun:stun.l.google.com:19302?transport=udp',
+        ]
+    }];
+
+    connection.onmessage = appendDIV;
+    //connection.filesContainer = document.getElementById('file-container');
+
+    connection.onopen = function () {
+        //document.getElementById('share-file').disabled = false;
+        document.getElementById('input-text-chat').disabled = false;
+    };
+
+    function disableInputButtons() {
+        document.getElementById('open-or-join-room').disabled = true;
+        document.getElementById('open-room').disabled = true;
+        document.getElementById('join-room').disabled = true;
+        document.getElementById('room-id').disabled = true;
+    }
+    /*
+    |-------------------------------------------------------------------------------------------------
+    | RTCMultiConnection Code end here
+    |-------------------------------------------------------------------------------------------------
+    */
+
+    /*
+    |-------------------------------------------------------------------------------------------------
+    | Customized chat start here
+    |-------------------------------------------------------------------------------------------------
+    */
+
+
+    //connection.socketCustomEvent = 'unique-private-group-or-romm-id'; // don't change this line
+connection.socketCustomEvent = 'privatelivehelp';
+    connection.connectSocket(function (socket) {
+        
+        // listen for custom messaging event
+        socket.on(connection.socketCustomEvent, function (event) {
+
+            console.log('test2==' + event.messageFor);
+            // check if someone sent you a custom message
+console.log('test2==' + event.messageFrom);
+           
+
+
+            if (event.messageFor === connection.userid) {
+
+
+                   /* “trigger onclick function with a keypress javascript”
+                    this option allow us to use enter key to send message */
+                    var input = document.getElementById("input-text-chat");
+                    input.addEventListener("keyup", function (event) {
+                        if (event.keyCode === 13) {
+                            event.preventDefault();
+                            document.getElementById("message-send").click();
+                        }
+                    });
+
+                    /* Message is send when user click on send bouton */
+                    document.getElementById("message-send").onclick = function (e) {
+
+                        let msgValue;
+
+                        msgValue = document.getElementById("input-text-chat").value;
+                        // removing trailing/leading whitespace
+                        msgValue = msgValue.replace(/^\s+|\s+$/g, '');
+                        if (!msgValue.length) return;
+
+                        //connection.send(this.value);
+                        connection.send(msgValue, event.userid);
+                        appendDIV(msgValue);
+                        msgValue = '';
+                        document.getElementById("input-text-chat").value = '';
+
+                    };
+
+            }
+
+            if (event.message === 'join-for-textchat') {
+                
+               let chatRequest = '<span class="status green"></span>' +
+                'online' ;
+
+                document.getElementById(event.messageFrom+'_status').innerHTML=chatRequest;
+
+            }
+
+
+
+
+
+        });
+    });
+
+
+
+        
+     
+
+  
+
+
+    connection.checkPresence('room8085', function (isRoomExist, roomid, error) {
+        if (isRoomExist === true) {
+            //connection.join(roomid);
+
+            //disableInputButtons();
+            connection.join(roomid, function () {
+                var userID = uuid();//something like: "ec0c22fa-f909-48da-92cb-db17ecdb91c5" 
+                connection.extra.userFullName = userID;
+                //showRoomURL(connection.sessionid,userID);
+            });
+
+        } else {
+
+            //disableInputButtons();
+            connection.open(roomid, function () {
+
+                var userID = uuid();//something like: "ec0c22fa-f909-48da-92cb-db17ecdb91c5" 
+
+                connection.extra.userFullName = userID;
+
+                //showRoomURL(connection.sessionid,userID);
+            });
+        }
+    });
+
+
+    //connection.open(roomid);
+    connection.onopen = function (event) {
+        //document.getElementById('share-file').disabled = false;
+        document.getElementById('input-text-chat').disabled = false;
+    };
+
+    /*
+    |-------------------------------------------------------------------------------------------------
+    | Customized chat end  here
+    |-------------------------------------------------------------------------------------------------
+    */
+
+
+    /*
+     |-------------------------------------------------------------------------------------------------
+     | Handling Room-ID start here
+     |-------------------------------------------------------------------------------------------------
+     */
+
+
+
+    function uuid() {
+        let uniq = Math.floor(Math.random() * 1000);
+        let userName = 'operator';
+        return userName + '_' + uniq;
+    }
+    connection.onUserStatusChanged = function (event) {
+        //var infoBar = document.getElementById('onUserStatusChanged');
+        var names = [];
+        var dict = {};
+        connection.getAllParticipants().forEach(function (pid) {
+            //names.push(getFullName(pid));
+            names.push(pid);
+            dict[pid] = getFullName(pid);
+        });
+
+        console.log('dict===' + JSON.stringify(dict));
+
+        if (!names.length) {
+            names = ['Only You'];
+        } else {
+            names = [connection.extra.userFullName || 'You'].concat(names);
+        }
+
+        //infoBar.innerHTML = '<b>Active users:</b> ' + names.join(', ');
+        var txt = "";
+        for (var key in dict) {
+            //let txt="";
+            var value = dict[key];
+
+            // do something with "key" and "value" variables
+
+            txt += '<li>' +
+                '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">' +
+                '<div>' +
+                '<h2 id=' + key + '>' + value + '</h2>' +
+                '<h3 id='+key+'_status>' +
+                '<span class="status orange"></span>' +
+                'offline' +
+                '</h3>' +
+                '</div>' +
+                '</li>';
+
+        }
+        document.getElementById('activeUsersList').innerHTML = txt;
+
+
+
+        /* let txt="";
+        names.forEach(myFunction);
+        
+        document.getElementById('activeUsersList').innerHTML=txt;
+        
+        function myFunction(value, index, array) {
+        
+        
+        txt +=  '<li>'+
+            '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">'+
+            '<div>'+
+                '<h2>'+value+'</h2>'+
+                '<h3>'+
+                    '<span class="status orange"></span>'+
+                    'offline'+
+                    '</h3>'+
+                    '</div>'+
+                    '</li>';
+        
+        
+        } */
+        console.log('pid==' + names);
+
+        $("#activeUsersList h2").click(function () {
+            let receiverName = $(this).html();
+            let receiverId = this.id;
+            (function () {
+                var socket = connection.socket;
+                //var userid = prompt('Enter userid. You will start text chat with this userid.');
+                var userid = uuid();//something like: "ec0c22fa-f909-48da-92cb-db17ecdb91c5" 
+                connection.extra.userFullName = userid;
+
+                socket.emit(connection.socketCustomEvent, {
+                    messageFor: receiverId,
+                    message: 'join-for-textchat',
+                    fullName: userid,
+                    userid: connection.userid
+                });
+
+            })();
+
+            $("#activechat h2").html('Chat with ' + receiverName);
+
+
+    /* “trigger onclick function with a keypress javascript”
+                    this option allow us to use enter key to send message */
+                    var input = document.getElementById("input-text-chat");
+                    input.addEventListener("keyup", function (event) {
+                        if (event.keyCode === 13) {
+                            event.preventDefault();
+                            document.getElementById("message-send").click();
+                        }
+                    });
+
+                    /* Message is send when user click on send bouton */
+                    document.getElementById("message-send").onclick = function (e) {
+
+                        let msgValue;
+
+                        msgValue = document.getElementById("input-text-chat").value;
+                        // removing trailing/leading whitespace
+                        msgValue = msgValue.replace(/^\s+|\s+$/g, '');
+                        if (!msgValue.length) return;
+
+                        //connection.send(this.value);
+                        connection.send(msgValue, event.userid);
+                        appendDIV(msgValue);
+                        msgValue = '';
+                        document.getElementById("input-text-chat").value = '';
+
+                    };
+
+
+
+            alert(this.id); // id of clicked li by directly accessing DOMElement property
+            //alert($(this).attr('id')); // jQuery's .attr() method, same but more verbose
+            alert($(this).html()); // gets innerHTML of clicked li
+            //alert($(this).text()); // gets text contents of clicked li
+            console.log('id====' + $(this).html());
+        });
+
+
+    };
+
+
+    function getFullName(userid) {
+        var _userFullName = userid;
+        if (connection.peers[userid] && connection.peers[userid].extra.userFullName) {
+            _userFullName = connection.peers[userid].extra.userFullName;
+        }
+        return _userFullName;
+    }
+
+    function showRoomURL(roomid, userNAme) {
+        var roomHashURL = '#' + roomid;
+        var roomQueryStringURL = '?roomid=' + roomid;
+
+        var html = '<h2>Unique URL for your room:</h2><br>';
+
+        html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
+        html += '<br>';
+        html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
+        html += 'your username==' + userNAme;
+        var roomURLsDiv = document.getElementById('room-urls');
+        roomURLsDiv.innerHTML = html;
+
+        roomURLsDiv.style.display = 'block';
+    }
+
+    (function () {
+        var params = {},
+            r = /([^&=]+)=?([^&]*)/g;
+
+        function d(s) {
+            return decodeURIComponent(s.replace(/\+/g, ' '));
+        }
+        var match, search = window.location.search;
+        while (match = r.exec(search.substring(1)))
+            params[d(match[1])] = d(match[2]);
+        window.params = params;
+    })();
+
+    var roomid = '';
+    if (localStorage.getItem(connection.socketMessageEvent)) {
+        roomid = localStorage.getItem(connection.socketMessageEvent);
+    } else {
+        roomid = connection.token();
+    }
+    document.getElementById('room-id').value = roomid;
+    document.getElementById('room-id').onkeyup = function () {
+        localStorage.setItem(connection.socketMessageEvent, this.value);
+    };
+
+    var hashString = location.hash.replace('#', '');
+    if (hashString.length && hashString.indexOf('comment-') == 0) {
+        hashString = '';
+    }
+
+    var roomid = params.roomid;
+    if (!roomid && hashString.length) {
+        roomid = hashString;
+    }
+
+    if (roomid && roomid.length) {
+        document.getElementById('room-id').value = roomid;
+        localStorage.setItem(connection.socketMessageEvent, roomid);
+
+        // auto-join-room
+        (function reCheckRoomPresence() {
+            connection.checkPresence(roomid, function (isRoomExists) {
+                if (isRoomExists) {
+                    connection.join(roomid);
+                    return;
+                }
+
+                setTimeout(reCheckRoomPresence, 5000);
+            });
+        })();
+
+        disableInputButtons();
+    }
+
+    /*
+     |-------------------------------------------------------------------------------------------------
+     | Handling Room-ID end here
+     |-------------------------------------------------------------------------------------------------
+     */
+
+    function empty(data) {
+        if (typeof (data) == 'number' || typeof (data) == 'boolean') {
+            return false;
+        }
+        if (typeof (data) == 'undefined' || data === null) {
+            return true;
+        }
+        if (typeof (data.length) != 'undefined') {
+            return data.length == 0;
+        }
+        var count = 0;
+        for (var i in data) {
+            if (data.hasOwnProperty(i)) {
+                count++;
+            }
+        }
+        return count == 0;
+    }
+
+</script>
